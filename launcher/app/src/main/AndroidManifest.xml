@@ -21,6 +21,10 @@
     <!-- YaOS (Yandex TV OS): HDMI, AV and the tuner all play in com.yandex.tv.live, whose activities require
          this permission (protection level normal, so it is granted at install). Ignored on other TVs. -->
     <uses-permission android:name="yandex.tv.permission.ACCESS_TV_SOURCE" />
+    <!-- iamaqib101 fork, the Watch screen only: INTERNET for New on your apps (TMDB) and web posters;
+         READ_TV_LISTINGS for Continue watching (the Watch Next table), granted by build-and-install. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_TV_LISTINGS" />
 
     <!-- Android 11+ package visibility: lets the launcher list the TV apps it shows as tiles, and the
          apps that declare a module card (docs/specs/card.md). -->
@@ -98,6 +102,12 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ShelfActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="landscape" />
 
         <activity
             android:name=".LauncherSettingsActivity"

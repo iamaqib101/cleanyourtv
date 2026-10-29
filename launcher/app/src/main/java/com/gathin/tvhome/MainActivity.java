@@ -738,6 +738,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         });
         btnLibraryTop.setVisibility(cfg.libraryButton && cfg.appLibrary ? View.VISIBLE : View.GONE);
         addTopBarApps(cfg.topBarApps, cfg.launchActions);
+        if (getResources().getBoolean(R.bool.watch_pill)) addWatchPill();
         iconOnlyButtons = cfg.iconOnlyButtons;
         topMenu = cfg.topMenu;
         wifiIconOnly = iconOnlyButtons && cfg.wifiLabelWidth <= 0;
@@ -2372,6 +2373,17 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             bar.addView(button, bar.indexOfChild(getResources().getBoolean(R.bool.rtl_menu_bar) ? btnVpn : btnWifi));
             topAppButtons.add(button);
         }
+    }
+
+    /** iamaqib101 fork: the Watch pill, first in the bar, opening Continue watching and New on your apps. */
+    private void addWatchPill() {
+        ViewGroup bar = findViewById(R.id.topButtons);
+        TextView button = (TextView) getLayoutInflater().inflate(R.layout.top_watch_button, bar, false);
+        button.setId(View.generateViewId());
+        button.setOnClickListener(v -> open(new Intent(this, ShelfActivity.class)));
+        int at = bar.indexOfChild(btnInputs) + 1;   // right after Inputs (which may be hidden)
+        bar.addView(button, Math.max(0, at));
+        topAppButtons.add(0, button);
     }
 
     @Override public void onLibraryUp() {

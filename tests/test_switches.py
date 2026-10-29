@@ -20,6 +20,8 @@ SWITCHES = DOCS / "switches.md"
 # Keys from before screenshots were required. This list only shrinks: once a key has a row in
 # docs/switches.md, take it off here.
 SCREENSHOT_WANTED = {
+    # iamaqib101 fork: the Watch screen, until it has a screenshot from the TV.
+    "watch_pill", "watch_region", "watch_language", "watch_providers",
     "accent_color", "advanced_effects", "always_show_names", "ambient_glow", "animations",
     "app_banners", "app_glow", "app_keys", "app_labels", "app_library", "app_library_selection",
     "background_color", "boot_to_live_tv", "cinematic_art", "cinematic_dots", "cinematic_home",

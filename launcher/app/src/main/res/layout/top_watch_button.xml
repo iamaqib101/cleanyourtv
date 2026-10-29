@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- iamaqib101 fork: the Watch pill in the top bar, opening ShelfActivity. -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/TopButton"
+    android:text="@string/shelf_pill"
+    android:nextFocusDown="@+id/grid" />

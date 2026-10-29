@@ -13,6 +13,13 @@ android {
         targetSdk 34
         versionCode 9
         versionName '3.0'
+        // iamaqib101 fork: TMDB key for the Watch screen, from the environment at build time so it never lands
+        // in the repo. Empty is fine: the tab then says how to add one.
+        buildConfigField 'String', 'TMDB_API_KEY', '"' + (System.getenv('TMDB_API_KEY') ?: '').replace('"', '') + '"'
+    }
+
+    buildFeatures {
+        buildConfig true
     }
 
     buildTypes {

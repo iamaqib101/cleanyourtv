@@ -64,6 +64,10 @@ A new key needs one there in the same pull request.
 | `reorder_button` | bool | A reorder button in the top bar (`false` by default); reordering is always in the Settings button's long-press menu |
 | `show_network_pill` | bool | The Wi-Fi/Ethernet pill in the top bar (`true` by default); `false` hides it |
 | `top_bar_apps` | list of package names | Apps shown as round buttons with their own logo in the top bar, left of the network pill; they leave the grid |
+| `watch_pill` | bool | iamaqib101 fork: the Watch pill in the top bar, opening Continue watching and New on your apps (`true` by default; config.xml only, not config.json) |
+| `watch_region` | string | iamaqib101 fork: the country (ISO 3166-1, `IN` by default) whose streaming catalogue New on your apps reads from TMDB |
+| `watch_language` | string | iamaqib101 fork: the language of New on your apps titles (`en-US` by default) |
+| `watch_providers` | list of names | iamaqib101 fork: the streaming services you subscribe to; each matches any TMDB service whose name contains it (`Hotstar` finds JioHotstar) |
 | `show_inputs_pill` | bool | The Inputs pill in the top bar, shown when the TV has inputs (`true` by default); `false` hides it, and with `top_menu` it also leaves Inputs out of the gear's menu (streamers with no HDMI input, such as the Chromecast with Google TV); what the remote's Input button does is unchanged |
 | `icon_only_buttons` | bool | Wi-Fi and Settings as round icon buttons; Inputs keeps its label (`false` by default) |
 | `icon_only_inputs` | bool | The Inputs pill as a round icon button too, its label kept as the TalkBack description (`false` by default). Works with or without `icon_only_buttons` |

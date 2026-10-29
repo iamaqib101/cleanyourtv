@@ -479,4 +479,21 @@
     <!-- Tiles drawn from the app's icon and name instead of its banner (for banners that crop badly). -->
     <string-array name="icon_tiles" translatable="false">
     </string-array>
+
+    <!-- iamaqib101 fork: the Watch screen (ShelfActivity), opened from a Watch pill in the top bar. Tabs: Continue
+         watching (every app's Watch Next rows) and New on your apps (TMDB). false hides the pill. -->
+    <bool name="watch_pill">true</bool>
+    <!-- New on your apps: the country whose streaming catalogue TMDB reads (ISO 3166-1), the language of titles,
+         and the services you subscribe to. A name matches any TMDB service containing it ("hotstar" finds
+         JioHotstar) and opens the installed app whose name contains it. Can also be set with "watch_region",
+         "watch_language" and "watch_providers" in config.json, with "tmdb_api_key" for the key. -->
+    <string name="watch_region" translatable="false">IN</string>
+    <string name="watch_language" translatable="false">en-US</string>
+    <string-array name="watch_providers" translatable="false">
+        <item>Netflix</item>
+        <item>Prime Video</item>
+        <item>Hotstar</item>
+        <item>Sony Liv</item>
+        <item>Zee5</item>
+    </string-array>
 </resources>

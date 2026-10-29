@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- iamaqib101 fork: the Watch screen. English only, so translatable="false" keeps lint's MissingTranslation quiet. -->
+<resources>
+    <string name="shelf_pill" translatable="false">Watch</string>
+    <string name="shelf_continue" translatable="false">Continue watching</string>
+    <string name="shelf_new" translatable="false">New on your apps</string>
+    <string name="shelf_loading" translatable="false">Loading…</string>
+    <string name="shelf_continue_empty" translatable="false">Nothing to continue. Apps add what you are watching here (Prime Video, Netflix, Disney+ and most others; YouTube does not).</string>
+    <string name="shelf_continue_permission" translatable="false">Continue watching needs the TV listings permission. Run launcher/build-and-install.sh again, or: pm grant com.gathin.tvhome android.permission.READ_TV_LISTINGS</string>
+    <string name="shelf_continue_unsupported" translatable="false">This TV has no Watch Next list, so Continue watching cannot be shown.</string>
+    <string name="shelf_new_empty" translatable="false">Nothing new on your services right now.</string>
+    <string name="shelf_new_no_key" translatable="false">Add a free TMDB API key to see new titles: build with TMDB_API_KEY=… or put "tmdb_api_key" in config.json.</string>
+    <string name="shelf_new_no_providers" translatable="false">TMDB knows none of these services in your region: %1$s</string>
+    <string name="shelf_new_offline" translatable="false">Could not reach TMDB (%1$s).</string>
+    <string name="shelf_no_app" translatable="false">%1$s is not installed.</string>
+</resources>
